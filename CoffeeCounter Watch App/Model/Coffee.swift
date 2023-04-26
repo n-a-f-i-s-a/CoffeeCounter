@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Coffee {
-    let count: Int
-    let date: Date
-}
+//struct Coffee {
+//    let count: Int
+//    let date: Date
+//}

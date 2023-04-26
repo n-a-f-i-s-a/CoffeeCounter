@@ -15,6 +15,11 @@
 		3CA7C11529F2125D009C786B /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C11429F2125D009C786B /* Coffee.swift */; };
 		3CA7C11929F212CB009C786B /* LoggerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C11829F212CB009C786B /* LoggerViewModel.swift */; };
 		3CA7C11C29F2166D009C786B /* CoffeeLoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C11B29F2166D009C786B /* CoffeeLoggerView.swift */; };
+		3CA7C12129F8C858009C786B /* CoffeeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C11F29F8C858009C786B /* CoffeeModel.xcdatamodeld */; };
+		3CA7C12329F8CA12009C786B /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C12229F8CA12009C786B /* CoreDataController.swift */; };
+		3CA7C12929F8E455009C786B /* OnlyDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C12829F8E455009C786B /* OnlyDate.swift */; };
+		3CA7C12B29FA298A009C786B /* CoffeeReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C12A29FA298A009C786B /* CoffeeReviewView.swift */; };
+		3CA7C12D29FA2A43009C786B /* CoffeeReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7C12C29FA2A43009C786B /* CoffeeReviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		3CA7C11429F2125D009C786B /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		3CA7C11829F212CB009C786B /* LoggerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerViewModel.swift; sourceTree = "<group>"; };
 		3CA7C11B29F2166D009C786B /* CoffeeLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeLoggerView.swift; sourceTree = "<group>"; };
+		3CA7C12029F8C858009C786B /* CoffeeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeModel.xcdatamodel; sourceTree = "<group>"; };
+		3CA7C12229F8CA12009C786B /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		3CA7C12829F8E455009C786B /* OnlyDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyDate.swift; sourceTree = "<group>"; };
+		3CA7C12A29FA298A009C786B /* CoffeeReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeReviewView.swift; sourceTree = "<group>"; };
+		3CA7C12C29FA2A43009C786B /* CoffeeReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeReviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,8 @@
 		3CA7C10129F20BD0009C786B /* CoffeeCounter Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				3CA7C12729F8E439009C786B /* Extension */,
+				3CA7C12429F8CA7F009C786B /* Service */,
 				3CA7C11729F212B1009C786B /* ViewModel */,
 				3CA7C10229F20BD0009C786B /* CoffeeCounterApp.swift */,
 				3CA7C11A29F212E2009C786B /* View */,
@@ -105,6 +117,7 @@
 		3CA7C11629F21262009C786B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3CA7C11F29F8C858009C786B /* CoffeeModel.xcdatamodeld */,
 				3CA7C11429F2125D009C786B /* Coffee.swift */,
 			);
 			path = Model;
@@ -114,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				3CA7C11829F212CB009C786B /* LoggerViewModel.swift */,
+				3CA7C12C29FA2A43009C786B /* CoffeeReviewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -123,8 +137,25 @@
 			children = (
 				3CA7C10429F20BD0009C786B /* ContentView.swift */,
 				3CA7C11B29F2166D009C786B /* CoffeeLoggerView.swift */,
+				3CA7C12A29FA298A009C786B /* CoffeeReviewView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3CA7C12429F8CA7F009C786B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3CA7C12229F8CA12009C786B /* CoreDataController.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3CA7C12729F8E439009C786B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3CA7C12829F8E455009C786B /* OnlyDate.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,11 +256,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA7C12329F8CA12009C786B /* CoreDataController.swift in Sources */,
 				3CA7C11529F2125D009C786B /* Coffee.swift in Sources */,
 				3CA7C11C29F2166D009C786B /* CoffeeLoggerView.swift in Sources */,
 				3CA7C10529F20BD0009C786B /* ContentView.swift in Sources */,
+				3CA7C12D29FA2A43009C786B /* CoffeeReviewViewModel.swift in Sources */,
 				3CA7C11929F212CB009C786B /* LoggerViewModel.swift in Sources */,
 				3CA7C10329F20BD0009C786B /* CoffeeCounterApp.swift in Sources */,
+				3CA7C12929F8E455009C786B /* OnlyDate.swift in Sources */,
+				3CA7C12B29FA298A009C786B /* CoffeeReviewView.swift in Sources */,
+				3CA7C12129F8C858009C786B /* CoffeeModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCounter Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CoffeeCounter;
@@ -390,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeeCounter Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CoffeeCounter;
@@ -418,6 +456,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
 				INFOPLIST_KEY_CFBundleDisplayName = CoffeeCounter;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nafisa.CoffeeCounter;
@@ -433,6 +472,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 42KMS8LBB5;
 				INFOPLIST_KEY_CFBundleDisplayName = CoffeeCounter;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nafisa.CoffeeCounter;
@@ -474,6 +514,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3CA7C11F29F8C858009C786B /* CoffeeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3CA7C12029F8C858009C786B /* CoffeeModel.xcdatamodel */,
+			);
+			currentVersion = 3CA7C12029F8C858009C786B /* CoffeeModel.xcdatamodel */;
+			path = CoffeeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3CA7C0F129F20BCF009C786B /* Project object */;
 }

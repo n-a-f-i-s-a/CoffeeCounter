@@ -8,25 +8,33 @@
 import SwiftUI
 
 struct CoffeeLoggerView: View {
-    @ObservedObject var loggerViewModel: LoggerViewModel
+    @StateObject var loggerViewModel: LoggerViewModel
+    @FetchRequest(
+        sortDescriptors: [],
+        predicate: NSPredicate(format: "date == %@", Date().onlyDate)
+    ) var coffee: FetchedResults<Coffee>
     
     var body: some View {
-            VStack {
-                Stepper {
-                    Image(systemName: "mug.fill")
-                } onIncrement: {
-                    loggerViewModel.increment()
-                } onDecrement: {
-                    loggerViewModel.decrement()
-                }
-                Text("You had ^[\(loggerViewModel.cupCounter) cup](inflect: true)")
+        VStack {
+            Stepper {
+                Image(systemName: "mug.fill")
+            } onIncrement: {
+                loggerViewModel.increment(coffee: coffee)
+            } onDecrement: {
+                loggerViewModel.decrement(coffee: coffee)
             }
-            .padding()
+            Text("You had ^[\(loggerViewModel.cupsSoFar) \("cup")](inflect: true)")
         }
+        .padding()
+        .onAppear {
+            loggerViewModel.fetchCoffee(coffee: coffee)
+        }
+    }
 }
 
 struct CoffeeLoggerView_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeLoggerView(loggerViewModel: LoggerViewModel())
+        let coreDataService = CoreDataController()
+        CoffeeLoggerView(loggerViewModel: LoggerViewModel(context: coreDataService.container.viewContext))
     }
 }
