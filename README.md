@@ -3,7 +3,7 @@
 This is a stand alone watch app which tracks daily coffee intake.
 
 
-#Screenshots:
+# Screenshots:
 
 <img width="264" alt="Screenshot 2023-04-28 at 4 46 39 pm" src="https://user-images.githubusercontent.com/61398249/235074837-b5786f36-f7a5-4125-9aa4-e9153dee68a0.png">
 
